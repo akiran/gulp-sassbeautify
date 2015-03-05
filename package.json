@@ -4,7 +4,8 @@
   "description": "beautify sass and scss files with gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "./node_modules/.bin/gulp",
+    "test": "diff -r test/result test/expectedResult"
   },
   "keywords": [
     "sass",
@@ -14,5 +15,13 @@
     "pretify"
   ],
   "author": "Kiran Abburi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.assign": "^3.0.0",
+    "sass-convert": "^0.5.0",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
 }
